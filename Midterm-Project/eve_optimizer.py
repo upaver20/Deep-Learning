@@ -1,15 +1,4 @@
-import tensorflow as tf
-
-# ECE 411, Computational Graphs for Machine Learning
-# Professor Chris Curro
-
-# Midterm Project: A Tensorflow implementation of Eve that improves upon Adam SGD optimization
-# By Frank Longueira
-
-# Acknowledgements: The paper describing this improvement is named
-# "Improving Stochastic Gradient Descent with Feedback" by Jayanth Koushik & Hiroaki Hayashi
-# of Carnegie Mellon University. The implementation found in the code below is based on the
-# following code implementing Adam: https://github.com/openai/weightnorm/blob/master/tensorflow/nn.py
+# coding: utf-8
 """
 INPUT:
 	params: collection of Tensorflow variables to optimize with respect to the cost
@@ -38,6 +27,20 @@ OUTPUT:
 	A single Tensorflow op for parameter updates
 
 """
+
+# ECE 411, Computational Graphs for Machine Learning
+# Professor Chris Curro
+
+# Midterm Project: A Tensorflow implementation of Eve that improves upon Adam SGD optimization
+# By Frank Longueira
+
+# Acknowledgements: The paper describing this improvement is named
+# "Improving Stochastic Gradient Descent with Feedback" by Jayanth Koushik & Hiroaki Hayashi
+# of Carnegie Mellon University. The implementation found in the code below is based on the
+# following code implementing Adam:
+# https://github.com/openai/weightnorm/blob/master/tensorflow/nn.py
+
+import tensorflow as tf
 
 
 def eve_updates(params,
